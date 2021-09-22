@@ -12,6 +12,7 @@
     margin: 3px 0 0 0;
     line-height: 34px;
     padding-left: 0;
+    display: flex;
 }
 
 .header__navbar-item {
@@ -20,10 +21,81 @@
     min-height: 26px;
 }
 
+.header__navbar-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header__navbar-user-name {
+    margin-left: 8px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    padding-left: 0;
+    list-style: none;
+    top: 100%;
+    right: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    width: 152px;
+    display: block;
+    box-shadow: 0 0 15px 10px rgb(0 0 0 / 10%);
+    z-index: 9999;
+    display: none;
+}
+
+.header__navbar-user-menu:before {
+    content: "";
+    border-style: solid;
+    border-width: 10px 14px;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 20px;
+    top: -18px;
+    cursor: pointer;
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header__navbar-user-item:hover {
+
+}
+
+.header__navbar-user-item a {
+    padding: 3px 16px 0;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #f7f7f7;
+    color: #30b566;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 400;
@@ -32,7 +104,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     list-style: none;
 }
@@ -75,7 +147,7 @@
 
 .header__navbar-icon-left {
     font-size: 1.6rem;
-    margin: 0 8px;
+    margin: 0 0 0 8px;
 }
 
 .header__navbar-icon-right {
@@ -97,6 +169,7 @@
     padding: 2px;
     border-radius: 2px;
     display: none;
+    box-shadow: 0 0 15px 10px rgb(0 0 0 / 10%);
     animation: fadeIn ease-in 0.3s;
     z-index: 9999;
 }
@@ -134,7 +207,7 @@
     right: 0;
     border: 1px solid #d3d3d3;
     cursor: default;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 36px) top;
     animation: headerNotifyGrownth ease-in 0.2s;
     -webkit-animation: headerNotifyGrownth ease-in 0.2s;
     -ms-animation: headerNotifyGrownth ease-in 0.2s;
@@ -447,6 +520,11 @@
 
 .header__logo {
     padding-right: 48px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
 }
 
 .header__logo-img {

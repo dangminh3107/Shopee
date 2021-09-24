@@ -1039,17 +1039,23 @@
     color: #555;
 }
 
-.product-link {
+.home-product-item {
+    display: block;
     text-decoration: none;
     color: var(--text-color);
-}
-
-.home-product-item {
     background: var(--white-color);
     margin-top: 10px;
-    margin-bottom: 10px;
     position: relative;
-    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+
+.home-product-item:hover {
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
 }
 
 .home-product-item__img {
@@ -1059,24 +1065,38 @@
 }
 
 .home-product-item__name {
+    height: 32px;
     font-size: 1.3rem;
     color: var(--text-color);
     font-weight: 300;
-    /* height: 3.2rem; */
-    display: block;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    margin: 10px;
+    margin: 10px 12px 0;
 }
 
 .home-product-item__price {
     display: flex;
     margin: 20px 12px 10px;
     align-items: baseline;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-product-item__price--free-ship .home-product-item__price-old-number {
+    width: 50px;
+}
+
+.home-product-item__price--free-ship .home-product-item__price-current {
+
+}
+
+.home-product-item__free-ship {
+    display: flex;
 }
 
 .home-product-item__price-old {
@@ -1085,6 +1105,7 @@
 
 .home-product-item__price-current {
     display: flex;
+    margin-left: auto;
 }
 
 .home-product-item__price-symbol-old {
@@ -1098,13 +1119,13 @@
 
 .home-product-item__price-old-number {
     font-size: 1.4rem;
-    width: 62px;
+    max-width: 100%;
     color: rgba(0,0,0,.54);
     text-decoration: line-through;
+    display: inline;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin-right: 5px;
 }
 
 .home-product-item__price-current-number {
@@ -1114,8 +1135,8 @@
 
 .home-product-item__free-ship-icon {
     position: relative;
-    position: relative;
-    margin-left: 2px;
+    margin: auto;
+    width: 20px;
 }
 
 .home-product-item__action {
@@ -1237,7 +1258,7 @@ i.home-product-item__like-icon-fill {
     color: var(--white-color);
     font-size: 1.4rem;
     line-height: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     position: relative; 
     top: 2px;
 }

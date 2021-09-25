@@ -619,6 +619,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+    height: 40vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -1062,6 +1064,7 @@
     padding-top: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .home-product-item__name {
@@ -1263,7 +1266,261 @@ i.home-product-item__like-icon-fill {
     top: 2px;
 }
 
+.home-product__pagination {
+    margin: 48px 0 32px;
+}
+
 /* Footer */
 .footer {
+    border-top: 4px solid var(--primary-color);
+    padding-top: 12px;
+}
 
+.footer__heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #747474;
+}
+
+.footer__heading:last-child {
+    margin: 40px 0;
+}
+
+.footer__payment {
+    display: flex;
+    flex-wrap: inherit;
+    width: 184px;
+    list-style: none;
+    align-items: center;
+}
+
+.footer__payment-method {
+    height: 18px;
+    display: block;
+}
+
+.footer__payment-method--visa {
+    height: 18px;
+}
+
+.footer__payment-method--mastercard {
+    height: 28px;
+    position: relative;
+    top: -3px;
+    margin: 0 27px 0 20px;
+}
+
+.footer__payment-method--jcb {
+    height: 24px;
+    position: relative;
+    top: -3px;
+}
+
+.footer__payment-method--amex {
+    height: 24px;
+    margin-left: 20px;
+}
+
+.footer__payment-method--COD {
+    height: 29px;
+    margin: 0 11px 0 24px;
+}
+
+.footer__payment-method--installment {
+    height: 29px;
+}
+
+.footer__payment-method--shopeepay {
+    height: 12px;
+}
+
+.footer__payment-method-shopeexpress {
+    height: 10px;
+}
+
+.footer__payment-method--giaohangtietkiem {
+    margin: 0 10px 0 10px;
+}
+
+.footer__payment-method--giaohangnhanh {
+
+}
+
+.footer__payment-method--viettelpost {
+
+}
+
+.footer__payment-method--vietnampost {
+    height: 28px;
+    margin: 0 23px 0 27px;
+}
+
+.footer__payment-method--jnt {
+
+}
+
+.footer__payment-method--grab-express {
+    height: 12px;
+}
+
+.footer__payment-method--ninja {
+    margin: 0 26px 0 20px;
+}
+
+.footer__payment-method--best-express {
+
+}
+
+.footer__payment--margin {
+    margin: 10px 0;
+}
+
+.footer__heading--margin {
+    margin: 40px 0;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item {
+    padding: 6px 0;
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    color: #747474;
+    margin-right: 10px;
+}
+
+.footer-item__link {
+    font-size: 1.2rem;
+    color: #a4a4a4;
+    text-decoration: none;
+    display: block;
+}
+
+.footer__download {
+    display: flex;
+}
+
+.footer__download-qr {
+    height: 86px;
+    width: 86px;
+    object-fit: contain;
+    border: 1px solid #d5d5d5;
+}
+
+.footer__download-app {
+    flex: 1;
+    display: flex;
+    margin-left: 16px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-img {
+    height: 16px;
+}
+
+.footer__download-app-img--google {
+    margin: 13px 0 12px 0;
+}
+
+.footer__download-app-link {
+    text-decoration: none;
+    margin: 0;
+}
+
+.footer-license {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid #dedede;
+    margin-top: 38px;
+}
+
+.footer-license__first,
+.footer-nations__title,
+.footer-nations__list,
+.footer-nations__link {
+    font-size: 1.4rem;
+    color: #a4a4a4;
+}
+
+.footer-nations {
+    display: flex;
+    margin-left: auto;
+}
+
+.footer-nations__list {
+    display: flex;
+    list-style: none;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.footer-nations__link {
+    text-decoration: none;
+    padding: 0 6px;
+    display: block;
+    border-right: 1px solid #a4a4a4;
+}
+
+.footer-nations__item:last-child a  {
+    border-right: none;
+}
+
+.footer-bottom {
+    background-color: #f5f5f5;
+}
+
+.footer-bottom__heading {
+    display: flex;
+    justify-content: center;
+    padding: 42px 0;
+}
+
+.footer-bottom__link {
+    text-decoration: none;
+    color: #a4a4a4;
+    display: block;
+    font-size: 1.4rem;
+    padding: 0 22px;
+    border-right: 1px solid #a4a4a4;
+}
+
+.footer-bottom__link:last-child {
+    border-right: none;
+}
+
+.footer-bottom__stamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom__stamp-img {
+    margin: 0 24px;
+}
+
+.footer-bottom__conpany {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.footer-bottom__info {
+    font-size: 1.2rem;
+    color: #626262;
+    font-weight: 300;
+    margin: 4px 0;
+}
+
+.footer-bottom__info:first-child {
+    margin-bottom: 16px;
 }
